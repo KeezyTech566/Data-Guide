@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Data Guide — BI Assistant</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">DG</div><div><strong>Data Guide</strong><span>BI Assistant</span></div></div>
+    <button class="new-chat" id="newChat"><span>＋</span> New conversation</button>
+    <nav>
+      <div class="nav-label">WORKSPACE</div>
+      <a class="nav-item active" href="#home">⌂ <span>Overview</span></a>
+      <a class="nav-item" href="#ask">✦ <span>Ask Data</span></a>
+      <a class="nav-item" href="#datasets">▣ <span>Datasets</span></a>
+      <a class="nav-item" href="#guides">◫ <span>Data Guides</span></a>
+      <a class="nav-item" href="#reports">▤ <span>Reports</span></a>
+      <div class="nav-label">TOOLS</div>
+      <a class="nav-item" href="#dax">ƒx <span>DAX Helper</span></a>
+      <a class="nav-item" href="#sql">⌘ <span>SQL Helper</span></a>
+      <a class="nav-item" href="#model">◇ <span>Model Checker</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><b>Need help?</b><p>Ask Data Guide about your dataset, DAX, SQL or dashboard.</p><button id="helpBtn">Start a guide →</button></div>
+      <div class="profile"><div class="avatar">K</div><div><b>Data Analyst</b><span>Workspace member</span></div><button>•••</button></div>
+    </div>
+  </aside>
+
+  <main class="main" id="home">
+    <header class="topbar"><button class="mobile-menu" id="menu">☰</button><div class="crumb">Workspace <span>/</span> Overview</div><div class="top-actions"><button class="icon-btn">⌕</button><button class="icon-btn">◔</button><button class="avatar small">K</button></div></header>
+    <section class="content">
+      <div class="hero">
+        <div><div class="eyebrow">INTELLIGENT DATA WORKSPACE</div><h1>Good evening. <span>What are you building?</span></h1><p>Use Data Guide to understand your data, create measures, validate models and build better dashboards.</p></div>
+        <div class="hero-badge"><div class="pulse"></div><div><b>Guide is ready</b><span>Connected to your workspace</span></div></div>
+      </div>
+
+      <section class="ask-card" id="ask">
+        <div class="ask-head"><div class="spark">✦</div><div><b>Ask Data Guide</b><span>Describe what you need in plain language</span></div><span class="online">● Online</span></div>
+        <textarea id="question" placeholder="e.g. How do I calculate driver availability percentage in Power BI?"></textarea>
+        <div class="ask-foot"><div class="chips"><button data-q="Create a DAX measure for me">DAX measure</button><button data-q="Help me understand my dataset">Understand data</button><button data-q="Check my data model">Check model</button><button data-q="Suggest dashboard visuals">Dashboard ideas</button></div><button class="send" id="send">Ask Guide <span>→</span></button></div>
+      </section>
+
+      <div class="section-title"><div><h2>Start with a tool</h2><p>Focused assistants for everyday BI work.</p></div><a href="#tools">View all →</a></div>
+      <div class="tools-grid" id="tools">
+        <button class="tool"><div class="tool-icon blue">ƒx</div><div><b>DAX Helper</b><span>Build, fix and explain DAX measures.</span></div><i>→</i></button>
+        <button class="tool"><div class="tool-icon purple">⌘</div><div><b>SQL Helper</b><span>Write and troubleshoot SQL queries.</span></div><i>→</i></button>
+        <button class="tool"><div class="tool-icon teal">◇</div><div><b>Model Checker</b><span>Find relationship and modelling issues.</span></div><i>→</i></button>
+        <button class="tool"><div class="tool-icon orange">▤</div><div><b>Dashboard Guide</b><span>Choose KPIs, visuals and layouts.</span></div><i>→</i></button>
+      </div>
+
+      <div class="lower-grid">
+        <section class="panel" id="datasets"><div class="panel-head"><div><h2>Recent datasets</h2><p>Continue where you left off.</p></div><button>View all</button></div><div class="dataset"><div class="file-icon">X</div><div><b>Driver Administration</b><span>Power BI dataset · Updated today</span></div><em>Connected</em></div><div class="dataset"><div class="file-icon csv">CSV</div><div><b>Attendance & Shift Status</b><span>CSV · Updated yesterday</span></div><em>Ready</em></div><div class="dataset"><div class="file-icon db">DB</div><div><b>Financial Health KPIs</b><span>PostgreSQL · Updated Sep 24</span></div><em>Connected</em></div></section>
+        <section class="panel" id="guides"><div class="panel-head"><div><h2>Popular guides</h2><p>Practical answers for analysts.</p></div><button>Browse</button></div><a class="guide"><span>01</span><div><b>Build a clean Power BI date table</b><small>Modeling · 6 min</small></div><strong>→</strong></a><a class="guide"><span>02</span><div><b>Fix incorrect DISTINCTCOUNT results</b><small>DAX · 4 min</small></div><strong>→</strong></a><a class="guide"><span>03</span><div><b>Design an executive KPI page</b><small>Dashboard · 8 min</small></div><strong>→</strong></a></section>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
